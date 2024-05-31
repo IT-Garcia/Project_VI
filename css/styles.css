@@ -1,14 +1,122 @@
 body {
     color: white;
-    background-color: black;
+    background-color: #000a13;
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
     line-height: 2rem;
 }
 
+.main_menu{
+    background-color: none;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.main_menu li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    color: #CA6702;
+  }
+
+.menu{
+    text-decoration: none;
+    color: #CA6702;
+}
+
+.menu:hover{
+    color: #BB3E03;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
+    width: 50%;
+    height: 50%;
+}
+
+.portraits{
+    width: 25%;
+}
+
+.text{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 70%;
+}
+/*-
+#main{
+    width: 100%;
+    min-height: 100hv;
+    position: relative;
+    background: linear-gradient(
+        45deg,
+        #005F73 0%,
+        #005F73 20%,
+        #0A9396 20%,
+        #0A9396 40%,
+        #CA6702 40%,
+        #CA6702 60%,
+        #BB3E03 60%
+        #BB3E03 80%
+        #9B2226 80%
+        #9B2226 100%
+    );
+    background-size: cover;
+    background-attachment: fixed;
+}
+*/
+.button_elevator_term{
+    background-color:#CA6702;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    text-align: center;
+    display: block;
+    padding: 25px 35px;
+    color: #000a13;
+    font-size: large;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 #BB3E03, 0 4px 6px 0 #BB3E03;
+}
+
+.button_elevator_term span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button_elevator_term span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button_elevator_term:hover span {
+    padding-right: 25px;
+  }
+  
+  .button_elevator_term:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
 /* menu item attributes */
-a:link.menu  { color: white; }
+/*a:link.menu  { color: white; }
 a:visited.menu { color: rgb(128, 128, 128); }
 a:hover.menu { color: red; }
 a:active.menu { color: black; }
-
+*/
