@@ -7,6 +7,8 @@ body {
 }
 
 /* menu item attributes */
+h1.h_menu{ display: inline;}
+li.h_menu{ display: inline;}
 a:link.menu  { color: white; }
 a:visited.menu { color: rgb(128, 128, 128); }
 a:hover.menu { color: red; }
