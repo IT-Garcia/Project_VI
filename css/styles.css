@@ -1,14 +1,19 @@
 body {
     color: white;
-    background-color: #000a13;
+    /* background-color: #000a13; */
+    background-image: url('../images/background.jpg');
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
     line-height: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .main_menu{
-    background-color: none;
     list-style-type: none;
+    background-color: #540d6e;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -16,19 +21,37 @@ body {
 }
 
 .main_menu li{
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
     font-size: 20px;
     padding: 20px;
-    color: #CA6702;
+    color: #FFB400;
   }
 
 .menu{
     text-decoration: none;
-    color: #CA6702;
+    color: #f72585;
 }
 
 .menu:hover{
-    color: #BB3E03;
+    color: #b5179e;
+}
+
+.image-button{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    height: 40px;
+    /* display: inline; */
+    
+}
+
+.image-button img{
+    width: 60px;
+    height: 60px;
+    /* margin: auto; */
 }
 
 .logo{
@@ -36,9 +59,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
-
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
 }
 
 .portraits{
@@ -74,7 +96,7 @@ body {
 }
 */
 .button_elevator_term{
-    background-color:#CA6702;
+    background-color:#f72585;
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
@@ -86,7 +108,7 @@ body {
     font-size: large;
     transition: all 0.5s;
     cursor: pointer;
-    box-shadow: 0 4px 4px 0 #BB3E03, 0 4px 6px 0 #BB3E03;
+    box-shadow: 0 4px 4px 0 #b5179e, 0 4px 6px 0 #b5179e;
 }
 
 .button_elevator_term span {
