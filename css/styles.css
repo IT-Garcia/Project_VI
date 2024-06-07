@@ -73,28 +73,7 @@ body {
     margin-top: 10%;
     width: 70%;
 }
-/*-
-#main{
-    width: 100%;
-    min-height: 100hv;
-    position: relative;
-    background: linear-gradient(
-        45deg,
-        #005F73 0%,
-        #005F73 20%,
-        #0A9396 20%,
-        #0A9396 40%,
-        #CA6702 40%,
-        #CA6702 60%,
-        #BB3E03 60%
-        #BB3E03 80%
-        #9B2226 80%
-        #9B2226 100%
-    );
-    background-size: cover;
-    background-attachment: fixed;
-}
-*/
+
 .button_elevator_term{
     background-color:#f72585;
     border-radius: 8px;
@@ -136,9 +115,3 @@ body {
     right: 0;
   }
 
-/* menu item attributes */
-/*a:link.menu  { color: white; }
-a:visited.menu { color: rgb(128, 128, 128); }
-a:hover.menu { color: red; }
-a:active.menu { color: black; }
-*/
