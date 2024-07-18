@@ -95,7 +95,7 @@ int pcanRx(int num_msgs){
 //This function performs a basic scan of the CAN network in 1 second intervals to retrieve and return the most recent CAN value on the network
 int sCAN() {
     HANDLE h2;
-    TPCANRdMsg Rxmsg;
+    TPCANMsg Rxmsg;
     int status;
 
     // Open a CAN channel
