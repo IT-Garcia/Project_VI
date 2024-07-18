@@ -4,8 +4,8 @@
 
 // Defines
 // ***********************************************************************************************************
-#define PCAN_RECEIVE_QUEUE_EMPTY        0x00020U  	// Receive queue is empty
-#define PCAN_NO_ERROR               	0x00000U  	// No error 
+//#define PCAN_RECEIVE_QUEUE_EMPTY        0x00020U  	// Receive queue is empty
+//#define PCAN_NO_ERROR               	0x00000U  	// No error 
 
 // Elevator project specific 
 #define ID_SC_TO_EC  0x100	// ID for messages from Supervisory controller to elevator controller
@@ -19,6 +19,13 @@
 #define GO_TO_FLOOR2 0x06	// Go to floor 2
 #define GO_TO_FLOOR3 0x07	// Go to floor 3
 
+#define CAN_BAUD_125K CAN_BAUD_125K
+#define PCAN_NO_ERROR 0
+#define PCAN_RECEIVE_QUEUE_EMPTY 0x02
+
+#define FLOOR1  0x05 // Floor 1 = 0x05
+#define FLOOR2  0x06 // Floor 2 = 0x06
+#define FLOOR3  0x07 // Floor 3 = 0x07
 
 // Function declarations
 int pcanTx(int id, int data);

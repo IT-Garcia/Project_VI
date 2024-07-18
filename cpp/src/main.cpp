@@ -29,7 +29,7 @@ int main() {
 				ID = chooseID();		// user to select ID depending on intended recipient
 				data = chooseMsg();		// user to select message data
 				pcanTx(ID, data);		// transmit ID and data 
-				insReqDB(FloorFromHex(data)); 		// change floor number in database ** NEW **
+				insReqDB(curFLr, FloorFromHex(data)); 		// change floor number in database ** NEW **
 				sleep(2);				
 				insFlrDB(FloorFromHex(data)); 		// change floor number in database ** NEW **
 				break; 
