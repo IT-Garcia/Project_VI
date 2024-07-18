@@ -144,4 +144,4 @@ int sCAN() {
 
         usleep(1000); // Sleep for 1ms to avoid busy waiting
     }
-}
+} //updated
