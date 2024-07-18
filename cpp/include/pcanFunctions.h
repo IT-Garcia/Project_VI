@@ -23,6 +23,6 @@
 // Function declarations
 int pcanTx(int id, int data);
 int pcanRx(int num_msgs);
-
+int sCAN();
 
 #endif

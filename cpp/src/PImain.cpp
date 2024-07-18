@@ -18,7 +18,7 @@ int main() {
 	int ID; 
 	int data; 
 	int numRx;
-	int floorRequest = 1, curFlr = 1;
+	int floorNumber = 1, prev_floorNumber = 1;
 
 	while(1) {
 		system("@cls||clear");
@@ -44,14 +44,12 @@ int main() {
 				db_setFloorNum(1);
 				
 				while(1){			
-					floorRequest = db_getFloorNum();
-					if (curFlr != floorRequest) {							// If requested floor changes in database
-						pcanTx(ID_SC_TO_EC, HexFromFloor(floorRequest));	// Change floors in the elevator - send command over CAN
-                        sleep(2);                                           // wait 2 seconds
-                        db_setFloorNum(floorRequest);                       // update current floor number in db to requested floor number after elevator has moved
+					floorNumber = db_getFloorNum();
+					if (prev_floorNumber != floorNumber) {								// If floor number changes in database
+						pcanTx(ID_SC_TO_EC, HexFromFloor(floorNumber));					// change floor number in elevator - send command over CAN
 					}
-					curFlr = floorRequest; 
-					sleep(1);												// poll database once every second to check for change in floor number
+					prev_floorNumber = floorNumber; 
+					sleep(1);															// poll database once every second to check for change in floor number
 				}
 				break;
 				
@@ -68,3 +66,10 @@ int main() {
 	
 	return(0);
 }
+
+
+
+
+
+
+	
