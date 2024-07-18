@@ -2,6 +2,8 @@
 
 #define DB_FUNCTIONS
 
+#include <string>
+
 std::string getCurrentTime();
 std::string getCurrentDate(); 
 
