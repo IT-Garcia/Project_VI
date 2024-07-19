@@ -29,7 +29,7 @@ int main() {
 				ID = chooseID();		// user to select ID depending on intended recipient
 				data = chooseMsg();		// user to select message data
 				pcanTx(ID, data);		// transmit ID and data 
-				insReqDB(curFLr, FloorFromHex(data)); 		// change floor number in database ** NEW **
+				insReqDB(curFlr, FloorFromHex(data)); 		// change floor number in database ** NEW **
 				sleep(2);				
 				insFlrDB(FloorFromHex(data)); 		// change floor number in database ** NEW **
 				break; 
@@ -51,7 +51,10 @@ int main() {
 				while(1)
 				{
 					//CAN Network Operations
-					numRx = sCAN();											// Scan the CAN network 
+					numRx = pcanRx(1);										// Scan the CAN network
+					printf("numRx: %d \n", numRx);
+					printf("flrHx: %d \n", flrHx);
+																				 
 					if(flrHx != numRx && numRx != -1)						// If the value on the CAN network has changed without errors update the database
 					{
 						floorRequest = FloorFromHex(numRx);					// Ensure correct floor value is inserted into the database
@@ -65,10 +68,11 @@ int main() {
 					floorRequest = db_getFloorNum();						// Check for floor requests on the database
 					if (curFlr != floorRequest) 							// If requested floor does not match the current floor
 					{							
-						pcanTx(ID_SC_TO_EC, HexFromFloor(floorRequest));	// Change floors in the elevator - send command over CAN
+						pcanTx(ID_SC_TO_EC, HexFromFloor(floorRequest));	// Change floors in the elevator - send command over CAN                       
                         sleep(2);                                           // wait 2 seconds
                         insFlrDB(floorRequest);                       		// update current floor number in db to requested floor number after elevator has moved
-						curFlr = floorRequest; 								// Update the global current floor variable
+						curFlr = floorRequest; 								// Update the integer (remote) current floor variable
+						flrHx = HexFromFloor(floorRequest);					// Update the hex (local CAN) current floor variable 	
 					}
 					//add error handling for db_getFloorNum() ??
 					//if insFlrDB returns -1 report error on dB "ERROR: Inserting Current Floor Failed"
