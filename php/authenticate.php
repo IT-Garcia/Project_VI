@@ -1,9 +1,45 @@
 <?php
-    if($submitted = !empty($_POST)){
-        $user_name = htmlspecialchars($_POST['uname']);
-        $passwd = htmlspecialchars($_POST['psw']);
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $_POST['uname'];
+        $password = $_POST['pswd'];
+
+        // Read the existing data from the JSON file
+        $dataFile = '../json/authorizedUsers.json';
+        if (file_exists($dataFile)) {
+            $jsonData = file_get_contents($dataFile);
+            $userCredentials = json_decode($jsonData, true);
+        } else {
+            $userCredentials = [];
+        }
+
+        // Check if the username and password match any existing user credentials
+        $userFound = false;
+        foreach ($userCredentials as $credential) {
+            if ($credential['uname'] === $username && password_verify($password, $credential['password'])) {
+                $userFound = true;
+                $_SESSION['uname'] = $username; // Store username in session
+                break;
+            }
+        }
+
+        if ($userFound) {
+            echo '<h1>Login Successful!!</h1>';
+            echo '<h2>You will be redirected in 5 seconds...</h2>';
+            header('Refresh: 5; http://localhost/soft_eng_midterm/php/members.php');
+            exit;
+        } else {
+            echo '<h1>Invalid username or password!</h1>';
+            echo '<h2>You will be redirected to the login page in 5 seconds...</h2>';
+            header('Refresh: 5; ../login.html');
+            exit;
+        }
+    } else {
+        echo 'Invalid request method!';
     }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
