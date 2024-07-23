@@ -19,23 +19,26 @@
     <li><a class="menu" href="bhlogbook.html">Brandon's Logbook</a></li>
     <li><a class="menu" href="itglogbook.html">Isai's Logbook</a></li>
 </ul>
-    <form>
-        <h1>Elevator Login</h1>
+   <!-- This form sends the username and password to authenticate.php via POST method -->
+<form action="php/authenticate.php" method="post">
+        <h1 id="greet"> Welcome!</h1> 
         <div class="formcontainer">
         <hr/>
         <div class="container">
-          <label for="uname"><strong>Username</strong></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-          <label for="psw"><strong>Password</strong></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+        <!-- Input field for the username; its value will be accessible in authenticate.php via $_POST['username'] -->
+        Username: <input type="text" name="username" required><br/>
+        <!-- Input field for the password; its value will be accessible in authenticate.php via $_POST['password'] -->
+        Password: <input type="password" name="password" required><br>
         </div>
-        <button type="submit" onclick="window.location.href='elevator.html'">Login</button>
+        <!-- Submit button for the form; sends the form data to authenticate.php when clicked -->
+        <button class="submit" type="submit">Log in</button> 
         <div class="container" style="background-color: #540D6E">
           <label style="padding-left: 15px">
           <input type="checkbox"  checked="checked" name="remember"> Remember me
           </label>
-          <span class="psw"><a href="#"> Forgot password?</a></span>
+          <span class="psw"><a href='requestaccess.html'> Request Access</a></span>
         </div>
       </form>
+      <script src="js/greeting.js"></script>
 </body>
 </html>
