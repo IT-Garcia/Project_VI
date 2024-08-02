@@ -98,6 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // ------------------ ADDED ELEVATOR FUNCTIONALITY --------------//
+
+    
+
+
     // ------------------ SCROLL TO TOP FUNCTION -------------------- //
 
     if (top_bttn) {

@@ -12,24 +12,6 @@ body {
     margin: 0;  
 }
 
-.elevator_inside{
-    margin: 5% auto;
-    background-color: #2e2157d7;
-    padding: 5%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #00f2ff;
-    box-shadow: 0 0 .2rem #fff,
-        0 0 .2rem #fff,
-        0 0 2rem #bc13fe,
-        0 0 0.8rem #bc13fe,
-        0 0 2.8rem #bc13fe,
-        inset 0 0 1.3rem #bc13fe;
-        border-radius: 10px;
-
-}
-
 form, .text{
     background-color: #2e2157d7;
     margin: 5% auto;
@@ -96,6 +78,24 @@ button {
     color: red;
     font-size: 2rem;
     text-align: center;
+}
+
+.elevator_inside{
+    margin: 5% auto;
+    background-color: #2E2157;
+    padding: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #00f2ff;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+        border-radius: 10px;
+
 }
 
 .floor_button{
@@ -177,6 +177,19 @@ h2{
     margin: 10px;
 }
 
+p.form-error{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+p.form-success{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
 
 
