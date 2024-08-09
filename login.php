@@ -18,7 +18,7 @@
   ?>
 
   <section>
-    <form id="login-form" action="includes/login.inc.php" method="post">
+    <form class="inputform" id="login-form" action="includes/login.inc.php" method="post">
         <h1>Elevator Login</h1>
         <div class="formcontainer">
         <hr/>

@@ -7,6 +7,7 @@
         <li><a href="https://github.com/users/IT-Garcia/projects/1" target="_blank">Project Plan & Status</a></li>
         <li><a href="bhlogbook.php">Brandon's Logbook</a></li>
         <li><a href="itglogbook.php">Isai's Logbook</a></li>
+        <li><a href="charts.php">Statistics</a></li>
         <?php
         session_start();
           if(isset($_SESSION["loggedin"])){

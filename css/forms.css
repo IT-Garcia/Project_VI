@@ -12,7 +12,7 @@ body {
     margin: 0;  
 }
 
-form, .text{
+.inputform, .text{
     background-color: #2e2157d7;
     margin: 5% auto;
     display: block;
@@ -115,6 +115,10 @@ button {
 
 
 .floor_button.active{
+    background-color: #2DE2E6;
+}
+
+.button-active{
     background-color: #2DE2E6;
 }
 

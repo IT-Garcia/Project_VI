@@ -55,7 +55,37 @@
             <ul>
                 <li>Conceptualized and completed a technical document describing our projects additional feature</li>
                 <li>Assisted Isai with updating HTML documents for project implementation</li>
-            </ul> 
+            </ul>
+            <h2> Week 7</h2>
+            <ul>
+                <li>Developed authentication, request access, and logout php files which can read and write from a JSON file (to be implemented)</li>
+                <li>Created Unified Model Language diagram which describes classes, attributes, and methods which will be implemented on the backend</li>
+            </ul>
+            <h2> Week 9</h2>
+            <ul>
+                <li>Revised UML Class diagram</li>
+                <li>Developed back end features such as update functionality using transactions to prevent database corruption</li>
+            </ul>
+            <h2> Week 10</h2>
+            <ul>
+                <li>Created and tested database Create, Read, Update, Delete functionality on members page </li>
+                <li>Created and tested skeleton code for web based elevator floor request buttons</li>
+            </ul>     
+            <h2> Week 11</h2>
+            <ul>
+                <li>Implemented logging of CAN communiction to database through local floor requests and recognition</li>
+                <li>Implemented functions on Web Server and Raspberry-Pi which can insert and pull most recent entry in database</li>
+                <li>Implemented live status reporting on elevator call button page</li>  
+                <li>Implemented elevator network log history</li>
+                <li>Implemented active button illumination on web server which responds to remote or local floor requests</li>                     
+            </ul>
+            <h2> Week 12</h2>
+            <ul>
+                <li>Implemented floor audio which announces the floor upon arrival</li>
+                <li>Implemented sabbath mode where elevator automatically performs an elevator call sequence</li>
+                <li>Integrated all functionality from week 10 to 12 onto the Raspberry-Pi for complete web and server functionality</li> 
+                <li>Created and completed test plan document for phase 2</li>                                 
+            </ul>   
     </section>
 
     <?php

@@ -18,7 +18,7 @@
     ?>
 
     <section>
-        <form action="includes/request_access_handler.inc.php" method="post">
+        <form class="inputform" action="includes/request_access_handler.inc.php" method="post">
             <h1>Request Access</h1>
             <div class="request_access">
                 <!-- First name -->
@@ -39,15 +39,6 @@
                 <!-- Birthday -->
                 <label for="birthday"><strong>Birth date</strong></label>
                 <input type="date" name="birth_date" required>
-
-                <!-- <h2>Request Type</h2>
-                
-                <div class="request_options">
-                    <input type="radio" id="request1" name="request_type" value="admin_access">
-                    <label for="request1"> Administrator</label>
-                    <input type="radio" id="request2" name="request_type" value="user_access" checked>
-                    <label for="request2">User</label>    
-                </div> -->
                 
                 <button id="sub_bttn" type="submit">Submit</button>
             </div>

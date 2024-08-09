@@ -1,0 +1,128 @@
+body {
+    display: block;
+    justify-content: center;
+    font-family: 'Saira', sans-serif;
+    font-size: 1.4rem;
+    background-image: url('../images/login_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color:  #F6019D;
+    margin: 0;  
+}
+
+
+div#terminal{
+    margin: 5% auto;
+    width: 60%;
+    background-color: #540d6ecc;
+    padding: 40px;
+    border: 2px solid #00f2ff;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+        border-radius: 10px;
+}
+
+div#elevator_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* flex-grow: 4; */
+}
+
+
+
+
+h2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.floor_button, .sabbath_button{
+    background-color: #9700CC;
+    position: relative;
+    cursor: pointer;
+    width: 30%;
+    height: 10%;
+    margin: 5% auto;
+    padding: 10px;
+    transition: background-color 0.3s ;
+}
+
+.floor_button:hover, .sabbath_button:hover{
+    background-color: #d128d1;
+    transition: background-color 0.3s ;
+}
+
+.floor_button img{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin: auto;
+    height: 15rem;
+}
+
+.sabbath_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    background-color: #f72585;
+    color: white;
+    padding: 14px 0;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.05rem;
+}
+
+/* =================== Elevator Command Status Table ================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(36, 11, 54, 0.9); /* Dark semi-transparent background */
+    box-shadow: 0 0 15px rgba(255, 0, 150, 0.6); /* Neon glow effect */
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff00ff; /* Neon pink text color */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to match the glow */
+}
+
+th {
+    background-color: rgba(75, 0, 130, 0.8); /* Dark purple background for headers */
+    color: #ffffff; /* White text color for headers */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+td {
+    background-color: rgba(75, 0, 130, 0.5); /* Semi-transparent purple for cells */
+    color: #00ffff; /* Cyan text color for table data */
+}
+
+tr:hover td {
+    background-color: rgba(75, 0, 130, 0.7); /* Slightly lighter purple on hover */
+}
+

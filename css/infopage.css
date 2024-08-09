@@ -84,3 +84,23 @@ div.text{
         inset 0 0 1.3rem #bc13fe;
         border-radius: 10px;
 }
+
+#chartDiv {
+    width: 80%; 
+    margin: 10% auto ; 
+    background-color: #540d6ecc;
+    padding: 40px;
+    border: 2px solid #00f2ff;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+        border-radius: 10px;
+}
+
+canvas {
+    width: 100% !important; /* Make the canvas fill the container */
+    height: auto !important; /* Adjust height to maintain aspect ratio */
+}
