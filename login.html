@@ -17,51 +17,34 @@
     <title>Login</title>
 </head>
 <body>
-  <nav> 
-    <ul>
-      <li><button id="nav_button" onclick="window.location.href='index.html';">
-          <img src="icons/lift.png" alt="Home"></button>
-      </li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="https://github.com/users/IT-Garcia/projects/1" target="_blank">Project Plan & Status</a></li>
-      <li><a href="bhlogbook.html">Brandon's Logbook</a></li>
-      <li><a href="itglogbook.html">Isai's Logbook</a></li>
-    </ul>
-  </nav>
-
-  <section>
-    <form id="login-form" action="php/authenticate.php" method="post">
-        <h1>Elevator Login</h1>
+  <ul class="main_menu">
+    <li><button class="image-button" onclick="window.location.href='index.html'">
+      <img src="icons/lift.png" alt="Home"></button></li>
+    <li><a class="menu" href="about.html">About</a></li>
+    <li><a class="menu" href="https://github.com/users/IT-Garcia/projects/1" target="_blank">Project Plan & Status</a></li>
+    <li><a class="menu" href="bhlogbook.html">Brandon's Logbook</a></li>
+    <li><a class="menu" href="itglogbook.html">Isai's Logbook</a></li>
+</ul>
+   <!-- This form sends the username and password to authenticate.php via POST method -->
+<form action="php/authenticate.php" method="post">
+        <h1 id="greet"> Welcome!</h1> 
         <div class="formcontainer">
         <hr/>
-        <div id="input_fields">
-          <label for="uname"><strong>Username</strong></label>
-          <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
-          <label for="pswd"><strong>Password</strong></label>
-          <input type="password" placeholder="Enter Password" id="pswd" name="pswd" required>
+        <div class="container">
+        <!-- Input field for the username; its value will be accessible in authenticate.php via $_POST['username'] -->
+        Username: <input type="text" name="username" required><br/>
+        <!-- Input field for the password; its value will be accessible in authenticate.php via $_POST['password'] -->
+        Password: <input type="password" name="password" required><br>
         </div>
-
-        <button type="submit">Login</button>
-        <button type="button" onclick="window.location.href='request_access.html'"> Request Access </button>
-        
-        <div id="form_footer">
-          <div>
-            <input type="checkbox" id="remember" checked="checked" name="remember">
-            <label for="remember">Remember Me</label>
-          </div>
-          <span><a id="forgot_bttn" href="#"> Forgot password?</a></span>
+        <!-- Submit button for the form; sends the form data to authenticate.php when clicked -->
+        <button class="submit" type="submit">Log in</button> 
+        <div class="container" style="background-color: #540D6E">
+          <label style="padding-left: 15px">
+          <input type="checkbox"  checked="checked" name="remember"> Remember me
+          </label>
+          <span class="psw"><a href='requestaccess.html'> Request Access</a></span>
         </div>
-    </form>
-    <div id="error-message"></div>
-  </section>
-
-  <section>
-    <div id="date-time-display"></div>
-  </section>
-
-  <footer>
-    <button id="top_bttn" title="Go to top" style="display: none;">Go to Top</button>
-    Brandon Hauck | Isai Torres Garcia &copy; <span id="current_year"></span> 
-  </footer>
+      </form>
+      <script src="js/greeting.js"></script>
 </body>
 </html>
