@@ -1,10 +1,16 @@
 <?php
 
-//Pi Credentials - Local
-$host = '192.168.1.200';
+//Pi Credentials - Local from host
+$host = 'localhost';
 $dbname = 'elevator';
 $dbusername = "itgtest";
 $dbpassword = "QNgIFKQKNqsaLLV2";
+
+//Pi Credentials - Local from remote
+// $host = '192.168.1.200';
+// $dbname = 'elevator';
+// $dbusername = "itgtest";
+// $dbpassword = "QNgIFKQKNqsaLLV2";
 
 //Pi Credentials - Remote
 // $host = '10.121.111.67:50050';
